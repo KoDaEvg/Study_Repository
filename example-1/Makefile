@@ -1,18 +1,15 @@
-Target = hello
-CC=g++
-SOURCES=$(wildcard *.cpp)
-OBJECTS=$(SOURCES:.cpp=.o)
 
-all: $(SOURCES) $(Target)
+all: debug release
 
-$(Target): $(OBJ) 
+debug: hello-dbg
 
-  $(CC) $(OBJ) -o $@
-.cpp.o:
-  $(CC) $< -o $@
+hello-dbg: hello.cpp
+	g++ -g -O0 hello.cpp -o hello-dbg -Wall
+	
+release: hello
 
 hello: hello.cpp
 	g++ -O2 hello.cpp -o hello -DNDEBUG -Wall
 
 clean:
-	rm -rf *.o
+	rm -rf hello hello-dbg
