@@ -1,5 +1,5 @@
 .PHONY: all debug release clean
-target = hello.cpp
+target = Kazino-Royal.cpp
 RELEASE_FLAGS = -O2 -Wall -DNDEBUG
 DEBUG_FLAGS   = -g -O0 -Wall
 RELEASE_EXEC  = hello
