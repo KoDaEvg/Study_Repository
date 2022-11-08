@@ -1,3 +1,7 @@
+target = hello.cpp
+СС = g++
+CCflags = -c
+
 
 .PHONY: all debug release clean
 
